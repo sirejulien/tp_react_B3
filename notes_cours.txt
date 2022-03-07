@@ -1,0 +1,64 @@
+//rappel JS
+  // let et const : déclaration de variable, pas de type
+
+  const test = () => {}  //privilégier cette ecriture des fonctions
+  function test2() {}
+  const test = toto => console.log((toto => {}))  //parenthèse dispensable si un seul parametre
+
+  // ; pas obligatoire
+
+  //spread operator
+  
+  const myArray = [1,2,3]
+  const newArray = [...myArray, 4, 5, 6]
+
+  console.log ('myArray content: ', myArray)
+  console.log ('newArray content: ', newArray)
+
+  const someObject= {
+    name: 'Sofiane'
+  }
+  const someNewObject={
+    name: 'Julien',
+    ...someObject,
+    age: 28,
+  }
+
+  console.log(someObject)
+  console.log(someNewObject)
+
+  //Array Destructuring
+
+  const array = [1,2,3,4,5]
+
+  const [a,b,c] = array
+
+  console.log('a content:',a) //1
+  console.log('b content:',b) //2
+  console.log('c content:',c) //3
+
+  console.log(array) // 1,2,3,4,5
+  
+
+  //Objet destructuring
+  
+const myObject = {
+  name: 'Julien',
+  age: 28,
+  gender: 'male'
+}
+
+const {age, name} = myObject
+console.log('age content: ',age)  //28
+console.log('name content: ',name)  //Julien  va chercher la variable par rapport au nom de la clé
+
+//Exports
+const Comp = () => {
+    console.log('Comp function')
+}
+
+export default Comp     //export défaut
+
+export const Comp2 = () => {        //export nommé
+    console.log('Comp2 function')
+}
