@@ -31,11 +31,21 @@ const task3 = {
 
   const myTaskList= [task1,task2,task3,task4]
 
+  handleAddNewTask = (newTask) => {
+    // l'idéal c'est d'initialiser un state avec la valeur du tableau de task
+    setState((previousState) => {
+      return [
+        ...previousState,
+        newTask
+      ]
+    })
+  }
+
   return (
     <div className="App">
       <p>Composant app</p>
       <Comp1 maPremiereProps={'Salsifi'} ></Comp1>
-      <TaskList taskList={myTaskList}></TaskList>
+      <TaskList taskList={myTaskList} newTaskHandler={handleAddNewTask}></TaskList>
     </div>
   );
 }
