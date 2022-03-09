@@ -4,7 +4,6 @@ const Task=(props) => {
 
     const handleTaskModify = (event) => {
         event.preventDefault()
-        console.log(event)
         props.modifyTaskHandler(props.task.id,inputValue)
     }
 
@@ -12,7 +11,6 @@ const Task=(props) => {
 
     const handleChangeInput = (event) => {
         setInputValue(event.target.value)
-        console.log('inputValue: ',inputValue)
     }
 
     return (

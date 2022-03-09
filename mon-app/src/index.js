@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 import './index.css';
-import App from './App';  //composants toujours nommés avec Majuscule sinon composant html
+//import App from './App';  //composants toujours nommés avec Majuscule sinon composant html
+import AppComics from './AppComics';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <AppComics />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
