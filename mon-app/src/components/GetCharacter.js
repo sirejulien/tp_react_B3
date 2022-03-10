@@ -4,7 +4,7 @@ function GetCharacter() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-      fetch("https://comicvine.gamespot.com/api/character")
+      fetch("https://api.disneyapi.dev/characters/"+'308')
         .then(res => res.json())
         .then(
           (result) => {

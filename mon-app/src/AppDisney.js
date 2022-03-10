@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import './AppComics.css';
+import './AppDisney.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CharacterBrowser from './pages/CharacterBrowser';
 
-const AppComics = () => {
+const AppDisney = () => {
 
   return (
-        <div className='AppComics'>
-            <h1>AppComics</h1>
+        <div className='AppDisney'>
+            <h1>AppDisney</h1>
                 <Navbar />
                 <Routes>
                     <Route path='/' element={<Home />} />
@@ -19,4 +19,4 @@ const AppComics = () => {
   )
 }
 
-export default AppComics;
+export default AppDisney;
