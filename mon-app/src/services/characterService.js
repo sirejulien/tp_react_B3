@@ -6,7 +6,10 @@ export const getPage = async (numPage) => {
     return data
 }
 
-export const getOne = async () => {
-
+export const getOne = async (id) => {
+    const urlFetch = "https://api.disneyapi.dev/characters/" + id
+    const response = await fetch(urlFetch)
+    const data = await response.json()
+    return data
 }
 

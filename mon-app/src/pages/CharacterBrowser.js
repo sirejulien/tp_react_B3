@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import ItemContainer from '../components/ItemContainer';
+import CharacterCardsContainer from '../components/CharacterCardsContainer';
 import * as characterService from '../services/characterService'
 
 const CharacterBrowser = () => {
@@ -36,15 +36,23 @@ const CharacterBrowser = () => {
       }
     })
   }
+  function handleFirstPage() {
+    setNumPage(1)
+  }
+  function handleLastPage() {
+    setNumPage(149)
+  }
 
   return (
-    <div>
-      <p>Wow so much cool characters!</p>
-      <ItemContainer characters={characters} />
+    <div className='characterBrowserPage'>
+      <h2>Characters Browser</h2>
+      <CharacterCardsContainer characters={characters} />
       <div className='pagination'>
-        <button onClick={handlePreviousPage}>&laquo;</button>
+        <button onClick={handleFirstPage}>&lt;&lt;</button>
+        <button onClick={handlePreviousPage}>&lt;</button>
         <button>{numPage}</button>
-        <button onClick={handleNextPage}>&raquo;</button>
+        <button onClick={handleNextPage}>&gt;</button>
+        <button onClick={handleLastPage}>&gt;&gt;</button>
       </div>
     </div>
   );
