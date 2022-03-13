@@ -3,21 +3,22 @@ import CharacterCardsContainer from '../components/CharacterCardsContainer';
 import * as characterService from '../services/characterService'
 
 const CharacterBrowser = () => {
-  const [numPage, setNumPage] = useState(1)
+  const [numPage, setNumPage] = useState(1) //par défaut page 1 demandée
 
-  const [characters, setCharacters] = useState([])
+  const [characters, setCharacters] = useState([]) //création du state contenant les personnages affichés
 
   const fetchCharactersHandler = useCallback(async () => {
-    const response = await characterService.getPage(numPage)
-    setCharacters(response.data)
-    window.scrollTo(0,0)
+    const response = await characterService.getPage(numPage)  //appel de l'API pour la page demandée
+    setCharacters(response.data)  //mis a jour des personnages affichés
+    window.scrollTo(0,0)  //retour en haut de page lors du changement de page 
   }, [numPage])
 
-  useEffect(() => {
+  useEffect(() => { //appel de chargement des personnages lors de l'arrivée sur la page
     fetchCharactersHandler()
   }
     , [fetchCharactersHandler])
 
+    //Fonctions gérant le changement de page. La dernière page (149) est écrite en dur mais il aurait été possible de faire un traitement pour rendre ce nombre dynamique en cas de changement de l'api
   function handleNextPage() {
     setNumPage((previousState) => {
       if (previousState === 149) {
@@ -46,8 +47,8 @@ const CharacterBrowser = () => {
   return (
     <div className='characterBrowserPage'>
       <h2>Characters Browser</h2>
-      <CharacterCardsContainer characters={characters} />
-      <div className='pagination'>
+      <CharacterCardsContainer characters={characters} /> {/* afichage du composant "Container" qui se charge d'appelé le composant "Card" pour chaque personnage*/}
+      <div className='pagination'> {/*division contenant les boutons de changement de page de personnages*/}
         <button onClick={handleFirstPage}>&lt;&lt;</button>
         <button onClick={handlePreviousPage}>&lt;</button>
         <button>{numPage}</button>

@@ -1,3 +1,5 @@
+/*feuille de style globale. Elle est importée dans AppDisney.js */
+
 html { 
     background: url(../public/img/background.jpg) no-repeat center center fixed; 
     background-size: cover;

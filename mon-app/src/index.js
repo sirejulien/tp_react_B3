@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AppDisney />
+    <BrowserRouter> //Permet l'utilisation du router au sein de l'application
+      <AppDisney /> //Appel de l'application
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

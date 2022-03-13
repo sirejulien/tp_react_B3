@@ -1,5 +1,6 @@
 import React from 'react';
 
+//page d'accueil, affiche une image stockée localement et un message de bienveu
 const Home = () =>{
   return (
     <div className='homePage'>

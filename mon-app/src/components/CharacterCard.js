@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+//Carte d'un personnage
+//La carte est elle meme un lien vers la page de detail du personnage
 const CharacterCard=(props) => {
 
     return (

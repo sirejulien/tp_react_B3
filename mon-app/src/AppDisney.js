@@ -6,6 +6,7 @@ import CharacterBrowser from './pages/CharacterBrowser';
 import RandomCharacter from './pages/RandomCharacter';
 import CharacterDetail from './pages/CharacterDetail';
 
+//Composant principal de l'application, il est appelé par l'index.js et contient la barre de titre, la navbar et la page affichée.
 const AppDisney = () => {
 
   return (
