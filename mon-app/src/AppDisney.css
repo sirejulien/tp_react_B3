@@ -3,6 +3,10 @@ html {
     background-size: cover;
   }
 
+  .AppDisney{
+    font-family: Broadway;
+  }
+
   .pagination {
     display: flex;
     justify-items: center;
@@ -47,7 +51,6 @@ html {
     width: 250px;
     height: 300px;
     background-color: rgba(117, 190, 218, 0.5);
-    
   }
 
   .characterCard img{
@@ -62,9 +65,8 @@ html {
 
   .titleBar{
     background-color: rgba(90, 98, 172, 0.568);
-    text-align: center;
-    margin:0;
-    padding: 0;
+    display:flex;
+    justify-content: center;
   }
 
   .navbar{
@@ -97,7 +99,7 @@ html {
   .homePage{
     margin-top: 20px;
     text-align: center;
-    color: white;
+    color:brown;
   }
 
   .characterBrowserPage{
@@ -119,4 +121,36 @@ html {
   }
   .randomCharacterPage button:hover{
     background-color: rgb(155, 119, 187); 
+  }
+
+  .characterDetail{
+      margin: 1%;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      color: brown;
+      background-color: rgba(117, 190, 218, 0.5);
+      display: block;
+      overflow: auto;
+  }
+  .characterDetail img{
+    float: right;
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1%;
+    border: 3px solid whitesmoke;
+  }
+  .characterDetailInfos{
+    float: left;
+    width: 70%;
+    margin:1%;
+  /*  border: 1px solid black; */
+  }
+  .characterDetailInfos h2{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 0;
+  }
+  .characterDetailInfos h3{
+    line-height: 0.5;
   }
